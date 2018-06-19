@@ -1,4 +1,4 @@
-module Element.Lazy exposing (lazy)
+module Element.Lazy exposing (lazy, lazy2, lazy3, lazy4, lazy5, lazy6, lazy7)
 
 {-| Same as `Html.lazy`. In case you're unfamiliar, here's a note from the `Html` library!
 
@@ -29,6 +29,41 @@ lazy : (a -> Element msg) -> a -> Element msg
 lazy fn a =
     Unstyled <| VirtualDom.lazy2 (embed fn) a
 
+
+{-| -}
+lazy2 : (a -> b -> Element msg) -> a -> b -> Element msg
+lazy2 fn a b =
+    Unstyled <| VirtualDom.lazy3 (embed fn) a b
+
+
+{-| -}
+lazy3 : (a -> b -> c -> Element msg) -> a -> b -> c -> Element msg
+lazy3 fn a b c =
+    Unstyled <| VirtualDom.lazy4 (embed fn) a b c
+
+
+{-| -}
+lazy4 : (a -> b -> c -> d -> Element msg) -> a -> b -> c -> d -> Element msg
+lazy4 fn a b c d =
+    Unstyled <| VirtualDom.lazy5 (embed fn) a b c d
+
+
+{-| -}
+lazy5 : (a -> b -> c -> d -> e -> Element msg) -> a -> b -> c -> d -> e -> Element msg
+lazy5 fn a b c d e =
+    Unstyled <| VirtualDom.lazy6 (embed fn) a b c d e
+
+
+{-| -}
+lazy6 : (a -> b -> c -> d -> e -> f -> Element msg) -> a -> b -> c -> d -> e -> f -> Element msg
+lazy6 fn a b c d e f =
+    Unstyled <| VirtualDom.lazy7 (embed fn) a b c d e f
+
+
+{-| -}
+lazy7 : (a -> b -> c -> d -> e -> f -> g -> Element msg) -> a -> b -> c -> d -> e -> f -> g -> Element msg
+lazy7 fn a b c d e f g =
+    Unstyled <| VirtualDom.lazy8 (embed fn) a b c d e f g
 
 
 -- {-| -}
