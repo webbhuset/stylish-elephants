@@ -33,37 +33,37 @@ lazy fn a =
 {-| -}
 lazy2 : (a -> b -> Element msg) -> a -> b -> Element msg
 lazy2 fn a b =
-    Unstyled <| VirtualDom.lazy3 (embed fn) a b
+   Unstyled <| VirtualDom.lazy3 (\a b -> embed (fn a) b) a b
 
 
 {-| -}
 lazy3 : (a -> b -> c -> Element msg) -> a -> b -> c -> Element msg
 lazy3 fn a b c =
-    Unstyled <| VirtualDom.lazy4 (embed fn) a b c
+    Unstyled <| VirtualDom.lazy4 (\a b c -> embed (fn a b) c) a b c
 
 
 {-| -}
 lazy4 : (a -> b -> c -> d -> Element msg) -> a -> b -> c -> d -> Element msg
 lazy4 fn a b c d =
-    Unstyled <| VirtualDom.lazy5 (embed fn) a b c d
+    Unstyled <| VirtualDom.lazy5 (\a b c d -> embed (fn a b c) d) a b c d
 
 
 {-| -}
 lazy5 : (a -> b -> c -> d -> e -> Element msg) -> a -> b -> c -> d -> e -> Element msg
 lazy5 fn a b c d e =
-    Unstyled <| VirtualDom.lazy6 (embed fn) a b c d e
+    Unstyled <| VirtualDom.lazy6 (\a b c d e -> embed (fn a b c d) e) a b c d e
 
 
 {-| -}
 lazy6 : (a -> b -> c -> d -> e -> f -> Element msg) -> a -> b -> c -> d -> e -> f -> Element msg
 lazy6 fn a b c d e f =
-    Unstyled <| VirtualDom.lazy7 (embed fn) a b c d e f
+    Unstyled <| VirtualDom.lazy7 (\a b c d e f -> embed (fn a b c d e) f) a b c d e f
 
 
 {-| -}
 lazy7 : (a -> b -> c -> d -> e -> f -> g -> Element msg) -> a -> b -> c -> d -> e -> f -> g -> Element msg
 lazy7 fn a b c d e f g =
-    Unstyled <| VirtualDom.lazy8 (embed fn) a b c d e f g
+    Unstyled <| VirtualDom.lazy8 (\a b c d e f g -> embed (fn a b c d e f) g) a b c d e f g
 
 
 -- {-| -}
