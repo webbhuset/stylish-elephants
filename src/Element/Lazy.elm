@@ -14,7 +14,7 @@ module Element.Lazy exposing (lazy, lazy2, lazy3, lazy4, lazy5, lazy6, lazy7)
     This is a really cheap test and often makes things a lot faster, but definitely
     benchmark to be sure!
 
-@docs lazy
+@docs lazy, lazy2, lazy3, lazy4, lazy5, lazy6, lazy7
 
 _Note:_ For now only `lazy` that covers one argument can be provided. In `0.19` this will change!
 
