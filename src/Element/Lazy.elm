@@ -27,7 +27,7 @@ import VirtualDom
 {-| -}
 lazy : (a -> Element msg) -> a -> Element msg
 lazy fn a =
-    Unstyled <| VirtualDom.lazy3 embed fn a
+    Unstyled <| VirtualDom.lazy2 (embed fn) a
 
 
 
