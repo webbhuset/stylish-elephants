@@ -948,7 +948,7 @@ rules =
                     [ Prop "display" "flex"
                     , Prop "flex-direction" "row"
                     , Child (dot classes.any)
-                        [ Prop "flex-basis" "0%"
+                        [ Prop "flex-basis" "auto"
                         , Descriptor (dot classes.widthExact)
                             [ Prop "flex-basis" "auto"
                             ]
